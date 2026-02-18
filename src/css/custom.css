@@ -1,0 +1,85 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Primary palette: blue */
+  --ifm-color-primary: #1f6feb;
+  --ifm-color-primary-dark: #1158c7;
+  --ifm-color-primary-darker: #0d419d;
+  --ifm-color-primary-darkest: #0c2d6b;
+  --ifm-color-primary-light: #58a6ff;
+  --ifm-color-primary-lighter: #79c0ff;
+  --ifm-color-primary-lightest: #a5d6ff;
+
+  --ifm-code-font-size: 95%;
+
+  /* Global dark background + accents */
+  --ifm-background-color: #02040a; /* near black */
+  --ifm-navbar-background-color: #02040a;
+  --ifm-footer-background-color: #02040a;
+  --ifm-card-background-color: #050816;
+  --ifm-link-color: var(--ifm-color-primary);
+
+  /* Make text readable on dark background */
+  --ifm-font-color-base: #f9fafb;
+  --ifm-font-color-base-inverse: #02040a;
+
+  /* Use a subtle red highlight for code lines */
+  --docusaurus-highlighted-code-line-bg: rgba(255, 61, 113, 0.16);
+}
+
+/* Dark mode keeps the same palette but slightly brighter blues for contrast. */
+[data-theme='dark'] {
+  --ifm-color-primary: #58a6ff;
+  --ifm-color-primary-dark: #1f6feb;
+  --ifm-color-primary-darker: #1158c7;
+  --ifm-color-primary-darkest: #0d419d;
+  --ifm-color-primary-light: #79c0ff;
+  --ifm-color-primary-lighter: #a5d6ff;
+  --ifm-color-primary-lightest: #cae8ff;
+
+  --ifm-background-color: #02040a;
+  --ifm-navbar-background-color: #02040a;
+  --ifm-footer-background-color: #02040a;
+  --ifm-card-background-color: #050816;
+  --ifm-link-color: var(--ifm-color-primary);
+
+  --ifm-font-color-base: #f9fafb;
+  --ifm-font-color-base-inverse: #02040a;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 61, 113, 0.22);
+}
+
+/* Hero section: black-to-blue-to-red gradient */
+.hero--primary {
+  background:
+    radial-gradient(circle at top left, #1f6feb 0, rgba(31, 111, 235, 0.1) 40%, transparent 55%),
+    radial-gradient(circle at bottom right, #ff4b5c 0, rgba(255, 75, 92, 0.08) 40%, transparent 55%),
+    #02040a;
+  color: #ffffff;
+}
+
+/* Footer styling to match dark theme */
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-font-color-base);
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.footer__title,
+.footer__link-item {
+  color: var(--ifm-font-color-base);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-light);
+}
+
+/* Hide footer on docs/tutorial pages but keep it on marketing pages */
+div[class*='docsWrapper'] + footer.footer {
+  display: none;
+}

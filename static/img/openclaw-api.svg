@@ -1,0 +1,48 @@
+<svg width="420" height="260" viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">OpenClaw API</title>
+  <defs>
+    <linearGradient id="panelBgApi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617" />
+      <stop offset="100%" stop-color="#050816" />
+    </linearGradient>
+    <linearGradient id="accentBlueApi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="100%" stop-color="#1f6feb" />
+    </linearGradient>
+    <linearGradient id="accentRedApi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4b5c" />
+      <stop offset="100%" stop-color="#ff7b89" />
+    </linearGradient>
+  </defs>
+
+  <rect x="12" y="16" width="396" height="228" rx="24" fill="url(#panelBgApi)" stroke="#1f2937" />
+
+  <!-- code window -->
+  <rect x="40" y="44" width="260" height="164" rx="18" fill="#020617" stroke="#1f2937" />
+  <circle cx="54" cy="56" r="4" fill="#ff4b5c" />
+  <circle cx="68" cy="56" r="4" fill="#facc15" />
+  <circle cx="82" cy="56" r="4" fill="#22c55e" />
+
+  <!-- braces -->
+  <path d="M84 96 C72 96 72 112 84 112 C72 112 72 128 84 128" fill="none" stroke="#4b5563" stroke-width="3" />
+  <path d="M156 96 C168 96 168 112 156 112 C168 112 168 128 156 128" fill="none" stroke="#4b5563" stroke-width="3" />
+
+  <!-- lines -->
+  <g stroke="#58a6ff" stroke-width="2" stroke-linecap="round">
+    <path d="M96 96 H144" />
+    <path d="M96 112 H144" />
+    <path d="M96 144 H204" />
+    <path d="M96 160 H196" />
+  </g>
+
+  <g stroke="#ff7b89" stroke-width="2" stroke-linecap="round">
+    <path d="M96 184 H188" />
+  </g>
+
+  <!-- client node -->
+  <rect x="320" y="92" width="64" height="64" rx="20" fill="#020617" stroke="#1f2937" />
+  <circle cx="352" cy="124" r="18" fill="url(#accentBlueApi)" />
+  <path d="M328 124 H316" stroke="url(#accentRedApi)" stroke-width="2" stroke-linecap="round" />
+  <path d="M312 124 L300 124" stroke="#58a6ff" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4" />
+</svg>
+
