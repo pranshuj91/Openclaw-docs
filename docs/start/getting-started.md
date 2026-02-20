@@ -30,7 +30,7 @@ Check your Node version with `node --version` if you are unsure.
 <Steps>
   <Step title="Install OpenClaw (recommended)">
     <Tabs>
-      <Tab title="macOS/Linux">
+      <TabItem value="macoslinux" label="macOS/Linux">
         ```bash
         curl -fsSL https://openclaw.ai/install.sh | bash
         ```
@@ -39,12 +39,12 @@ Check your Node version with `node --version` if you are unsure.
   alt="Install Script Process"
   className="rounded-lg"
 />
-      </Tab>
-      <Tab title="Windows (PowerShell)">
+      </TabItem>
+      <TabItem value="windows-powershell" label="Windows (PowerShell)">
         ```powershell
         iwr -useb https://openclaw.ai/install.ps1 | iex
         ```
-      </Tab>
+      </TabItem>
     </Tabs>
 
     <Note>

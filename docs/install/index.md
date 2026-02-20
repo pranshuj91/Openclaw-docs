@@ -32,16 +32,16 @@ The **installer script** is the recommended way to install OpenClaw. It handles 
     Downloads the CLI, installs it globally via npm, and launches the onboarding wizard.
 
     <Tabs>
-      <Tab title="macOS / Linux / WSL2">
+      <TabItem value="macos-linux-wsl2" label="macOS / Linux / WSL2">
         ```bash
         curl -fsSL https://openclaw.ai/install.sh | bash
         ```
-      </Tab>
-      <Tab title="Windows (PowerShell)">
+      </TabItem>
+      <TabItem value="windows-powershell" label="Windows (PowerShell)">
         ```powershell
         iwr -useb https://openclaw.ai/install.ps1 | iex
         ```
-      </Tab>
+      </TabItem>
     </Tabs>
 
     That's it — the script handles Node detection, installation, and onboarding.
@@ -49,16 +49,16 @@ The **installer script** is the recommended way to install OpenClaw. It handles 
     To skip onboarding and just install the binary:
 
     <Tabs>
-      <Tab title="macOS / Linux / WSL2">
+      <TabItem value="macos-linux-wsl2" label="macOS / Linux / WSL2">
         ```bash
         curl -fsSL https://openclaw.ai/install.sh | bash -s -- --no-onboard
         ```
-      </Tab>
-      <Tab title="Windows (PowerShell)">
+      </TabItem>
+      <TabItem value="windows-powershell" label="Windows (PowerShell)">
         ```powershell
         & ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1))) -NoOnboard
         ```
-      </Tab>
+      </TabItem>
     </Tabs>
 
     For all flags, env vars, and CI/automation options, see [Installer internals](/install/installer).
@@ -69,7 +69,7 @@ The **installer script** is the recommended way to install OpenClaw. It handles 
     If you already have Node 22+ and prefer to manage the install yourself:
 
     <Tabs>
-      <Tab title="npm">
+      <TabItem value="npm" label="npm">
         ```bash
         npm install -g openclaw@latest
         openclaw onboard --install-daemon
@@ -84,8 +84,8 @@ The **installer script** is the recommended way to install OpenClaw. It handles 
 
           If you see `sharp: Please add node-gyp to your dependencies`, either install build tooling (macOS: Xcode CLT + `npm install -g node-gyp`) or use the env var above.
         </Accordion>
-      </Tab>
-      <Tab title="pnpm">
+      </TabItem>
+      <TabItem value="pnpm" label="pnpm">
         ```bash
         pnpm add -g openclaw@latest
         pnpm approve-builds -g        # approve openclaw, node-llama-cpp, sharp, etc.
@@ -95,7 +95,7 @@ The **installer script** is the recommended way to install OpenClaw. It handles 
         <Note>
         pnpm requires explicit approval for packages with build scripts. After the first install shows the "Ignored build scripts" warning, run `pnpm approve-builds -g` and select the listed packages.
         </Note>
-      </Tab>
+      </TabItem>
     </Tabs>
 
   </Accordion>

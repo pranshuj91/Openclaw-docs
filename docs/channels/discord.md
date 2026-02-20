@@ -90,7 +90,7 @@ Token resolution is account-aware. Config token values win over env fallback. `D
 ## Access control and routing
 
 <Tabs>
-  <Tab title="DM policy">
+  <TabItem value="dm-policy" label="DM policy">
     `channels.discord.dm.policy` controls DM access:
 
     - `pairing` (default)
@@ -107,9 +107,9 @@ Token resolution is account-aware. Config token values win over env fallback. `D
 
     Bare numeric IDs are ambiguous and rejected unless an explicit user/channel target kind is provided.
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Guild policy">
+  <TabItem value="guild-policy" label="Guild policy">
     Guild handling is controlled by `channels.discord.groupPolicy`:
 
     - `open`
@@ -150,9 +150,9 @@ Token resolution is account-aware. Config token values win over env fallback. `D
 
     If you only set `DISCORD_BOT_TOKEN` and do not create a `channels.discord` block, runtime fallback is `groupPolicy="open"` (with a warning in logs).
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Mentions and group DMs">
+  <TabItem value="mentions-and-group-dms" label="Mentions and group DMs">
     Guild messages are mention-gated by default.
 
     Mention detection includes:
@@ -168,7 +168,7 @@ Token resolution is account-aware. Config token values win over env fallback. `D
     - default: ignored (`dm.groupEnabled=false`)
     - optional allowlist via `dm.groupChannels` (channel IDs or slugs)
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ### Role-based agent routing

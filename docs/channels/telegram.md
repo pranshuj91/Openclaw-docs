@@ -104,7 +104,7 @@ Token resolution order is account-aware. In practice, config values win over env
 ## Access control and activation
 
 <Tabs>
-  <Tab title="DM policy">
+  <TabItem value="dm-policy" label="DM policy">
     `channels.telegram.dmPolicy` controls direct message access:
 
     - `pairing` (default)
@@ -130,9 +130,9 @@ curl "https://api.telegram.org/bot<bot_token>/getUpdates"
 
     Third-party method (less private): `@userinfobot` or `@getidsbot`.
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Group policy and allowlists">
+  <TabItem value="group-policy-and-allowlists" label="Group policy and allowlists">
     There are two independent controls:
 
     1. **Which groups are allowed** (`channels.telegram.groups`)
@@ -163,9 +163,9 @@ curl "https://api.telegram.org/bot<bot_token>/getUpdates"
 }
 ```
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Mention behavior">
+  <TabItem value="mention-behavior" label="Mention behavior">
     Group replies require mention by default.
 
     Mention can come from:
@@ -202,7 +202,7 @@ curl "https://api.telegram.org/bot<bot_token>/getUpdates"
     - or read `chat.id` from `openclaw logs --follow`
     - or inspect Bot API `getUpdates`
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ## Runtime behavior

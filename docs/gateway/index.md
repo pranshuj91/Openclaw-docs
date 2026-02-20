@@ -120,7 +120,7 @@ See: [Remote Gateway](/gateway/remote), [Authentication](/gateway/authentication
 Use supervised runs for production-like reliability.
 
 <Tabs>
-  <Tab title="macOS (launchd)">
+  <TabItem value="macos-launchd" label="macOS (launchd)">
 
 ```bash
 openclaw gateway install
@@ -131,9 +131,9 @@ openclaw gateway stop
 
 LaunchAgent labels are `ai.openclaw.gateway` (default) or `ai.openclaw.<profile>` (named profile). `openclaw doctor` audits and repairs service config drift.
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Linux (systemd user)">
+  <TabItem value="linux-systemd-user" label="Linux (systemd user)">
 
 ```bash
 openclaw gateway install
@@ -147,9 +147,9 @@ For persistence after logout, enable lingering:
 sudo loginctl enable-linger <user>
 ```
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Linux (system service)">
+  <TabItem value="linux-system-service" label="Linux (system service)">
 
 Use a system unit for multi-user/always-on hosts.
 
@@ -158,7 +158,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now openclaw-gateway[-<profile>].service
 ```
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ## Multiple gateways on one host

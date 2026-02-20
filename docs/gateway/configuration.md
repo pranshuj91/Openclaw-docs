@@ -36,26 +36,26 @@ See the [full reference](/gateway/configuration-reference) for every available f
 ## Editing config
 
 <Tabs>
-  <Tab title="Interactive wizard">
+  <TabItem value="interactive-wizard" label="Interactive wizard">
     ```bash
     openclaw onboard       # full setup wizard
     openclaw configure     # config wizard
     ```
-  </Tab>
-  <Tab title="CLI (one-liners)">
+  </TabItem>
+  <TabItem value="cli-one-liners" label="CLI (one-liners)">
     ```bash
     openclaw config get agents.defaults.workspace
     openclaw config set agents.defaults.heartbeat.every "2h"
     openclaw config unset tools.web.search.apiKey
     ```
-  </Tab>
-  <Tab title="Control UI">
+  </TabItem>
+  <TabItem value="control-ui" label="Control UI">
     Open [http://127.0.0.1:18789](http://127.0.0.1:18789) and use the **Config** tab.
     The Control UI renders a form from the config schema, with a **Raw JSON** editor as an escape hatch.
-  </Tab>
-  <Tab title="Direct edit">
+  </TabItem>
+  <TabItem value="direct-edit" label="Direct edit">
     Edit `~/.openclaw/openclaw.json` directly. The Gateway watches the file and applies changes automatically (see [hot reload](#config-hot-reload)).
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ## Strict validation

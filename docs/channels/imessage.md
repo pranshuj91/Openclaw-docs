@@ -31,7 +31,7 @@ Status: legacy external CLI integration. Gateway spawns `imsg rpc` and communica
 ## Quick setup
 
 <Tabs>
-  <Tab title="Local Mac (fast path)">
+  <TabItem value="local-mac-fast-path" label="Local Mac (fast path)">
     <Steps>
       <Step title="Install and verify imsg">
 
@@ -77,9 +77,9 @@ openclaw pairing approve imessage <CODE>
       </Step>
     </Steps>
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Remote Mac over SSH">
+  <TabItem value="remote-mac-over-ssh" label="Remote Mac over SSH">
     OpenClaw only requires a stdio-compatible `cliPath`, so you can point `cliPath` at a wrapper script that SSHes to a remote Mac and runs `imsg`.
 
 ```bash
@@ -104,7 +104,7 @@ exec ssh -T gateway-host imsg "$@"
 
     If `remoteHost` is not set, OpenClaw attempts to auto-detect it by parsing the SSH wrapper script.
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ## Requirements and permissions (macOS)
@@ -127,7 +127,7 @@ imsg send <handle> "test"
 ## Access control and routing
 
 <Tabs>
-  <Tab title="DM policy">
+  <TabItem value="dm-policy" label="DM policy">
     `channels.imessage.dmPolicy` controls direct messages:
 
     - `pairing` (default)
@@ -139,9 +139,9 @@ imsg send <handle> "test"
 
     Allowlist entries can be handles or chat targets (`chat_id:*`, `chat_guid:*`, `chat_identifier:*`).
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Group policy + mentions">
+  <TabItem value="group-policy-mentions" label="Group policy + mentions">
     `channels.imessage.groupPolicy` controls group handling:
 
     - `allowlist` (default when configured)
@@ -160,9 +160,9 @@ imsg send <handle> "test"
 
     Control commands from authorized senders can bypass mention gating in groups.
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Sessions and deterministic replies">
+  <TabItem value="sessions-and-deterministic-replies" label="Sessions and deterministic replies">
     - DMs use direct routing; groups use group routing.
     - With default `session.dmScope=main`, iMessage DMs collapse into the agent main session.
     - Group sessions are isolated (`agent:<agentId>:imessage:group:<chat_id>`).
@@ -173,7 +173,7 @@ imsg send <handle> "test"
     Some multi-participant iMessage threads can arrive with `is_group=false`.
     If that `chat_id` is explicitly configured under `channels.imessage.groups`, OpenClaw treats it as group traffic (group gating + group session isolation).
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ## Deployment patterns

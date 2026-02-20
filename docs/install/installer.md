@@ -20,7 +20,7 @@ OpenClaw ships three installer scripts, served from `openclaw.ai`.
 ## Quick commands
 
 <Tabs>
-  <Tab title="install.sh">
+  <TabItem value="installsh" label="install.sh">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash
     ```
@@ -29,8 +29,8 @@ OpenClaw ships three installer scripts, served from `openclaw.ai`.
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash -s -- --help
     ```
 
-  </Tab>
-  <Tab title="install-cli.sh">
+  </TabItem>
+  <TabItem value="install-clish" label="install-cli.sh">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install-cli.sh | bash
     ```
@@ -39,8 +39,8 @@ OpenClaw ships three installer scripts, served from `openclaw.ai`.
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install-cli.sh | bash -s -- --help
     ```
 
-  </Tab>
-  <Tab title="install.ps1">
+  </TabItem>
+  <TabItem value="installps1" label="install.ps1">
     ```powershell
     iwr -useb https://openclaw.ai/install.ps1 | iex
     ```
@@ -49,7 +49,7 @@ OpenClaw ships three installer scripts, served from `openclaw.ai`.
     & ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1))) -Tag beta -NoOnboard -DryRun
     ```
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 <Note>
@@ -101,26 +101,26 @@ The script exits with code `2` for invalid method selection or invalid `--instal
 ### Examples (install.sh)
 
 <Tabs>
-  <Tab title="Default">
+  <TabItem value="default" label="Default">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash
     ```
-  </Tab>
-  <Tab title="Skip onboarding">
+  </TabItem>
+  <TabItem value="skip-onboarding" label="Skip onboarding">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash -s -- --no-onboard
     ```
-  </Tab>
-  <Tab title="Git install">
+  </TabItem>
+  <TabItem value="git-install" label="Git install">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash -s -- --install-method git
     ```
-  </Tab>
-  <Tab title="Dry run">
+  </TabItem>
+  <TabItem value="dry-run" label="Dry run">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash -s -- --dry-run
     ```
-  </Tab>
+  </TabItem>
 </Tabs>
 
 <AccordionGroup>
@@ -188,26 +188,26 @@ Designed for environments where you want everything under a local prefix (defaul
 ### Examples (install-cli.sh)
 
 <Tabs>
-  <Tab title="Default">
+  <TabItem value="default" label="Default">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install-cli.sh | bash
     ```
-  </Tab>
-  <Tab title="Custom prefix + version">
+  </TabItem>
+  <TabItem value="custom-prefix-version" label="Custom prefix + version">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install-cli.sh | bash -s -- --prefix /opt/openclaw --version latest
     ```
-  </Tab>
-  <Tab title="Automation JSON output">
+  </TabItem>
+  <TabItem value="automation-json-output" label="Automation JSON output">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install-cli.sh | bash -s -- --json --prefix /opt/openclaw
     ```
-  </Tab>
-  <Tab title="Run onboarding">
+  </TabItem>
+  <TabItem value="run-onboarding" label="Run onboarding">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install-cli.sh | bash -s -- --onboard
     ```
-  </Tab>
+  </TabItem>
 </Tabs>
 
 <AccordionGroup>
@@ -266,34 +266,34 @@ Designed for environments where you want everything under a local prefix (defaul
 ### Examples (install.ps1)
 
 <Tabs>
-  <Tab title="Default">
+  <TabItem value="default" label="Default">
     ```powershell
     iwr -useb https://openclaw.ai/install.ps1 | iex
     ```
-  </Tab>
-  <Tab title="Git install">
+  </TabItem>
+  <TabItem value="git-install" label="Git install">
     ```powershell
     & ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1))) -InstallMethod git
     ```
-  </Tab>
-  <Tab title="Custom git directory">
+  </TabItem>
+  <TabItem value="custom-git-directory" label="Custom git directory">
     ```powershell
     & ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1))) -InstallMethod git -GitDir "C:\openclaw"
     ```
-  </Tab>
-  <Tab title="Dry run">
+  </TabItem>
+  <TabItem value="dry-run" label="Dry run">
     ```powershell
     & ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1))) -DryRun
     ```
-  </Tab>
-  <Tab title="Debug trace">
+  </TabItem>
+  <TabItem value="debug-trace" label="Debug trace">
     ```powershell
     # install.ps1 has no dedicated -Verbose flag yet.
     Set-PSDebug -Trace 1
     & ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1))) -NoOnboard
     Set-PSDebug -Trace 0
     ```
-  </Tab>
+  </TabItem>
 </Tabs>
 
 <AccordionGroup>
@@ -334,27 +334,27 @@ If `-InstallMethod git` is used and Git is missing, the script exits and prints 
 Use non-interactive flags/env vars for predictable runs.
 
 <Tabs>
-  <Tab title="install.sh (non-interactive npm)">
+  <TabItem value="installsh-non-interactive-npm" label="install.sh (non-interactive npm)">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash -s -- --no-prompt --no-onboard
     ```
-  </Tab>
-  <Tab title="install.sh (non-interactive git)">
+  </TabItem>
+  <TabItem value="installsh-non-interactive-git" label="install.sh (non-interactive git)">
     ```bash
     OPENCLAW_INSTALL_METHOD=git OPENCLAW_NO_PROMPT=1 \
       curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install.sh | bash
     ```
-  </Tab>
-  <Tab title="install-cli.sh (JSON)">
+  </TabItem>
+  <TabItem value="install-clish-json" label="install-cli.sh (JSON)">
     ```bash
     curl -fsSL --proto '=https' --tlsv1.2 https://openclaw.ai/install-cli.sh | bash -s -- --json --prefix /opt/openclaw
     ```
-  </Tab>
-  <Tab title="install.ps1 (skip onboarding)">
+  </TabItem>
+  <TabItem value="installps1-skip-onboarding" label="install.ps1 (skip onboarding)">
     ```powershell
     & ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1))) -NoOnboard
     ```
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ---

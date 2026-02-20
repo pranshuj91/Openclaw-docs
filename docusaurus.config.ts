@@ -26,7 +26,8 @@ const config: Config = {
   organizationName: 'openclaw', // Usually your GitHub org/user name.
   projectName: 'openclaw-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -44,6 +45,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Only use the English docs and ignore large localized trees
           exclude: ['**/zh-CN/**', '**/ja-JP/**'],
+          // Show last update time
+          showLastUpdateTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:

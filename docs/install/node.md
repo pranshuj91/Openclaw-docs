@@ -22,7 +22,7 @@ If this prints `v22.x.x` or higher, you're good. If Node isn't installed or the 
 ## Install Node
 
 <Tabs>
-  <Tab title="macOS">
+  <TabItem value="macos" label="macOS">
     **Homebrew** (recommended):
 
     ```bash
@@ -31,8 +31,8 @@ If this prints `v22.x.x` or higher, you're good. If Node isn't installed or the 
 
     Or download the macOS installer from [nodejs.org](https://nodejs.org/).
 
-  </Tab>
-  <Tab title="Linux">
+  </TabItem>
+  <TabItem value="linux" label="Linux">
     **Ubuntu / Debian:**
 
     ```bash
@@ -48,8 +48,8 @@ If this prints `v22.x.x` or higher, you're good. If Node isn't installed or the 
 
     Or use a version manager (see below).
 
-  </Tab>
-  <Tab title="Windows">
+  </TabItem>
+  <TabItem value="windows" label="Windows">
     **winget** (recommended):
 
     ```powershell
@@ -64,7 +64,7 @@ If this prints `v22.x.x` or higher, you're good. If Node isn't installed or the 
 
     Or download the Windows installer from [nodejs.org](https://nodejs.org/).
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 <Accordion title="Using a version manager (nvm, fnm, mise, asdf)">
@@ -108,7 +108,7 @@ This almost always means npm's global bin directory isn't on your PATH.
   </Step>
   <Step title="Add it to your shell startup file">
     <Tabs>
-      <Tab title="macOS / Linux">
+      <TabItem value="macos-linux" label="macOS / Linux">
         Add to `~/.zshrc` or `~/.bashrc`:
 
         ```bash
@@ -116,10 +116,10 @@ This almost always means npm's global bin directory isn't on your PATH.
         ```
 
         Then open a new terminal (or run `rehash` in zsh / `hash -r` in bash).
-      </Tab>
-      <Tab title="Windows">
+      </TabItem>
+      <TabItem value="windows" label="Windows">
         Add the output of `npm prefix -g` to your system PATH via Settings → System → Environment Variables.
-      </Tab>
+      </TabItem>
     </Tabs>
 
   </Step>

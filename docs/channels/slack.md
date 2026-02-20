@@ -24,7 +24,7 @@ Status: production-ready for DMs + channels via Slack app integrations. Default 
 ## Quick setup
 
 <Tabs>
-  <Tab title="Socket Mode (default)">
+  <TabItem value="socket-mode-default" label="Socket Mode (default)">
     <Steps>
       <Step title="Create Slack app and tokens">
         In Slack app settings:
@@ -80,9 +80,9 @@ openclaw gateway
       </Step>
     </Steps>
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="HTTP Events API mode">
+  <TabItem value="http-events-api-mode" label="HTTP Events API mode">
     <Steps>
       <Step title="Configure Slack app for HTTP">
 
@@ -117,7 +117,7 @@ openclaw gateway
       </Step>
     </Steps>
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ## Token model
@@ -135,7 +135,7 @@ For actions/directory reads, user token can be preferred when configured. For wr
 ## Access control and routing
 
 <Tabs>
-  <Tab title="DM policy">
+  <TabItem value="dm-policy" label="DM policy">
     `channels.slack.dm.policy` controls DM access:
 
     - `pairing` (default)
@@ -152,9 +152,9 @@ For actions/directory reads, user token can be preferred when configured. For wr
 
     Pairing in DMs uses `openclaw pairing approve slack <code>`.
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Channel policy">
+  <TabItem value="channel-policy" label="Channel policy">
     `channels.slack.groupPolicy` controls channel handling:
 
     - `open`
@@ -170,9 +170,9 @@ For actions/directory reads, user token can be preferred when configured. For wr
     - channel allowlist entries and DM allowlist entries are resolved at startup when token access allows
     - unresolved entries are kept as configured
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Mentions and channel users">
+  <TabItem value="mentions-and-channel-users" label="Mentions and channel users">
     Channel messages are mention-gated by default.
 
     Mention sources:
@@ -190,7 +190,7 @@ For actions/directory reads, user token can be preferred when configured. For wr
     - `systemPrompt`
     - `tools`, `toolsBySender`
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ## Commands and slash behavior

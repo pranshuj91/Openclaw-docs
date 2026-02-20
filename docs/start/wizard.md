@@ -45,17 +45,17 @@ which stores `tools.web.search.apiKey`. Docs: [Web tools](/tools/web).
 The wizard starts with **QuickStart** (defaults) vs **Advanced** (full control).
 
 <Tabs>
-  <Tab title="QuickStart (defaults)">
+  <TabItem value="quickstart-defaults" label="QuickStart (defaults)">
     - Local gateway (loopback)
     - Workspace default (or existing workspace)
     - Gateway port **18789**
     - Gateway auth **Token** (auto‑generated, even on loopback)
     - Tailscale exposure **Off**
     - Telegram + WhatsApp DMs default to **allowlist** (you'll be prompted for your phone number)
-  </Tab>
-  <Tab title="Advanced (full control)">
+  </TabItem>
+  <TabItem value="advanced-full-control" label="Advanced (full control)">
     - Exposes every step (mode, workspace, gateway, channels, daemon, skills).
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ## What the wizard configures

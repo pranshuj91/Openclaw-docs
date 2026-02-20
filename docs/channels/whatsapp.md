@@ -134,7 +134,7 @@ OpenClaw recommends running WhatsApp on a separate number when possible. (The ch
 ## Access control and activation
 
 <Tabs>
-  <Tab title="DM policy">
+  <TabItem value="dm-policy" label="DM policy">
     `channels.whatsapp.dmPolicy` controls direct chat access:
 
     - `pairing` (default)
@@ -150,9 +150,9 @@ OpenClaw recommends running WhatsApp on a separate number when possible. (The ch
     - if no allowlist is configured, the linked self number is allowed by default
     - outbound `fromMe` DMs are never auto-paired
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Group policy + allowlists">
+  <TabItem value="group-policy-allowlists" label="Group policy + allowlists">
     Group access has two layers:
 
     1. **Group membership allowlist** (`channels.whatsapp.groups`)
@@ -170,9 +170,9 @@ OpenClaw recommends running WhatsApp on a separate number when possible. (The ch
 
     Note: if no `channels.whatsapp` block exists at all, runtime group-policy fallback is effectively `open`.
 
-  </Tab>
+  </TabItem>
 
-  <Tab title="Mentions + /activation">
+  <TabItem value="mentions-activation" label="Mentions + /activation">
     Group replies require mention by default.
 
     Mention detection includes:
@@ -188,7 +188,7 @@ OpenClaw recommends running WhatsApp on a separate number when possible. (The ch
 
     `activation` updates session state (not global config). It is owner-gated.
 
-  </Tab>
+  </TabItem>
 </Tabs>
 
 ## Personal-number and self-chat behavior
