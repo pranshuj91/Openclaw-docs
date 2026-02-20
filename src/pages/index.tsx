@@ -31,7 +31,7 @@ function HomepageHeader() {
           </div>
           <div>
             <img
-              src="/img/openclaw-hero.svg"
+              src="/img/Attached_image.png"
               alt="OpenClaw pipelines and integrations overview"
               className={styles.heroIllustration}
             />
