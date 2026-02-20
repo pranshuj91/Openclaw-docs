@@ -179,6 +179,32 @@ function Tooltip(props: Props) {
   );
 }
 
+function Frame(props: Props) {
+  const { caption, children } = props;
+  return (
+    <div style={{
+      margin: '1rem 0',
+      padding: '0.5rem',
+      border: '1px solid var(--ifm-color-emphasis-300)',
+      borderRadius: '8px',
+      backgroundColor: 'var(--ifm-code-background)',
+      textAlign: 'center'
+    }}>
+      {children}
+      {caption && (
+        <div style={{
+          marginTop: '0.5rem',
+          fontSize: '0.9rem',
+          color: 'var(--ifm-color-content-secondary)',
+          fontStyle: 'italic'
+        }}>
+          {caption}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default {
   // Keep Docusaurus default MDX components
   ...MDXComponents,
@@ -222,5 +248,6 @@ export default {
   AccordionGroup,
   Accordion,
   Tooltip,
+  Frame,
 };
 

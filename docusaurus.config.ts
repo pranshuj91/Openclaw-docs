@@ -89,33 +89,14 @@ const config: Config = {
         alt: 'Gaincafe logo',
         src: 'img/gaincafe logo.svg',
         srcDark: 'img/gaincafe logo.svg',
-        href: '/docs/intro', // Go straight to tutorial when clicking the logo
+        href: '/', // Go to homepage when clicking the logo
       },
       items: [],
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'OpenClaw',
-          items: [
-            {
-              label: 'Getting started',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Project',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/openclaw',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} OpenClaw. Built with Docusaurus.`,
+      links: [],
+      copyright: `This documentation was created for gaincafe's use. © ${new Date().getFullYear()}`,
     },
     prism: {
       theme: prismThemes.github,
